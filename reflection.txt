@@ -1,0 +1,21 @@
+1. What did you learn in this lesson?
+understand more syntax Knockout 
+2. How did you use Knockout.JS?
+
+use it to add and delete data and save a json
+
+3. Explain how and why you solved the user stories with technical details.
+	---As a user, I must be able to view my contact list, with first and last name, and phone numbers
+		I resolved this storie using a separate table and all by full name and phone number using the input
+	---As a user, I must be able to add a new contact with all his information.
+		as I said in the previous storie solve it using the input to add to contacts who asked me and with all your info
+	---As a user I must be able to delete contacts from my address book. and As a user I must be able to add and remove phone numbers to any individual contact
+		as I said this storie so that aggregates was a remove button so that at any moment I could remove any contact and number phone
+	---As a backend developer, I must receive all the address book contacts as a JSON so I can store it in a database
+		use a function of knockout
+self.save = function () {
+         self.lastSavedJson (JSON.stringify (ko.toJS (self.contacts), null, 2));
+     }; // Json Keeps and displays
+ 
+     self.lastSavedJson = ko.observable ("")
+I allowed myself with my storie complir
