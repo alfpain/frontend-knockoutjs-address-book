@@ -7,7 +7,7 @@ var initialData = [
         { type: "Mobile", number: "(555) 444-2222" },
         { type: "Home", number: "(555) 999-1212"}]
     }
-];
+]; // variable that keeps my phone numbers Names
  
 var ContactsModel = function(contacts) {
     var self = this;
@@ -18,7 +18,7 @@ var ContactsModel = function(contacts) {
             {
             var map = { firstName: contact.firstName, lastName: contact.lastName, phones: ko.observableArray(contact.phones) };
 
-            return map;
+            return map; // which returns my contacts
         })
     );
  
@@ -26,31 +26,31 @@ var ContactsModel = function(contacts) {
 
         self.contacts.push({
             firstName: "",
-            lastName: "",
+            lastName: "",             // adds a new contact
             phones: ko.observableArray()
         });
     };
  
     self.removeContact = function(contact) {
-        self.contacts.remove(contact).slideUp();
+        self.contacts.remove(contact).slideUp(); //remove contact
     };
  
     self.addPhone = function(contact) {
         contact.phones.push({
             type: "",
             number: ""
-        });
+        }); // add a new number phone
     };
  
     self.removePhone = function(phone) {
         $.each(self.contacts(), function() { this.phones.remove(phone) })
-    };
+    }; // remove a number phone
  
     self.save = function() {
         self.lastSavedJson(JSON.stringify(ko.toJS(self.contacts), null, 2));
-    };
+    }; // json keeps and displays
  
     self.lastSavedJson = ko.observable("")
 };
  
-ko.applyBindings(new ContactsModel(initialData));
+ko.applyBindings(new ContactsModel(initialData)); 

@@ -2,14 +2,16 @@
 <html>
 	<head>
 		<title>Book</title>
+		<!-- link the css and bootstrap-->
 		<link rel='stylesheet' href='css/styles.css' type='text/css'>
 		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css" type = "text/css"/>
 		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap.css.map" type = "text/css"/>
 		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.css" type = "text/css"/>
 		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.css.map" type = "text/css"/>
 		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.min.css" type = "text/css"/>
+		<!-- link the css and bootstrap-->
 	</head>
-	<body background = "http://www.ambrosiasw.com/assets/images/graphics_products/ipadwallpaper/wallpaper/Leather.jpg">
+	<body background = "http://www.ambrosiasw.com/assets/images/graphics_products/ipadwallpaper/wallpaper/Leather.jpg"> 
 	<div class = "container">
 		<div class = "row">
 			<div class='liveExample'> 
@@ -43,22 +45,24 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
+				</div> <!-- contac list -->
 
-		<div class = "row">
-				<p>
-					<button data-bind='click: addContact'>Add a contact</button>
-					<button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
-				</p>
-				 
-				<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>
-		</div>
-			</div>
-		</div> <!-- row -->
-	</div>
+				<div class = "row">
+						<p>
+							<button data-bind='click: addContact'>Add a contact</button>
+							<button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
+						</p>
+						 
+						<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>
+				</div> <!-- second row -->
+			</div> <!-- live example -->
+		</div> <!-- frits row -->
+	</div><!-- container -->
+	<!-- script the java , bootstrap, jquery and knockout -->
 	<script type="text/javascript" src = "http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
+	<!-- script the java , bootstrap, jquery and knockout -->
 	</body>
 </html>
