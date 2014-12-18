@@ -1,0 +1,64 @@
+
+<html>
+	<head>
+		<title>Book</title>
+		<link rel='stylesheet' href='css/styles.css' type='text/css'>
+		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css" type = "text/css"/>
+		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap.css.map" type = "text/css"/>
+		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.css" type = "text/css"/>
+		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.css.map" type = "text/css"/>
+		<Link rel = "stylesheet" href = "bootstrap/css/bootstrap-theme.min.css" type = "text/css"/>
+	</head>
+	<body background = "http://www.ambrosiasw.com/assets/images/graphics_products/ipadwallpaper/wallpaper/Leather.jpg">
+	<div class = "container">
+		<div class = "row">
+			<div class='liveExample'> 
+				<h2>Contacts</h2>
+				<div id='contactsList' class="input-group">
+					<table class='contactsEditor table table-responsive'>
+						<tr>
+							<th>First name</th>
+							<th>Last name</th>
+							<th>Phone numbers</th>
+						</tr>
+						<tbody data-bind="foreach: contacts" class = "table-responsibe">
+							<tr>
+								<td>
+									<input data-bind='value: firstName' class="form-control"/>
+									<div><button href='#' data-bind='click: $root.removeContact'>Delete</button></div>
+								</td>
+								<td><input data-bind='value: lastName' class="form-control" /></td>
+								<td>
+									<table>
+										<tbody data-bind="foreach: phones">
+											<tr>
+												<td><input data-bind='value: type' class="form-control" /></td>
+												<td><input data-bind='value: number' class="form-control"/></td>
+												<td><button href='#' data-bind='click: $root.removePhone'>Delete</button></td>
+											</tr>
+										</tbody>
+									</table>
+									<button href='#' data-bind='click: $root.addPhone'>Add number</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+		<div class = "row">
+				<p>
+					<button data-bind='click: addContact'>Add a contact</button>
+					<button data-bind='click: save, enable: contacts().length > 0'>Save to JSON</button>
+				</p>
+				 
+				<textarea data-bind='value: lastSavedJson' rows='5' cols='60' disabled='disabled'> </textarea>
+		</div>
+			</div>
+		</div> <!-- row -->
+	</div>
+	<script type="text/javascript" src = "http://knockoutjs.com/downloads/knockout-3.2.0.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	</body>
+</html>

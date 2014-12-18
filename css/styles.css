@@ -1,0 +1,9 @@
+
+.liveExample {
+background-color: #EEEEDD;
+border: solid; 
+text-align: center;
+-webkit-border-radius: 80px;
+-moz-border-radius: 80px;
+border-radius: 80px;
+}
